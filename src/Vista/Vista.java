@@ -36,7 +36,7 @@ import Controlador.Controlador;
 public class Vista extends JFrame {
 	private Controlador controlador;
 	private JPanel mainPanel;
-	private JLabel lblNumSilabas;
+	private JLabel lblNumLetras;
 	private JSpinner spinnerNumSilabas;
 	private JLabel lblSubTitle2;
 	private JButton btnGenerar;
@@ -58,6 +58,7 @@ public class Vista extends JFrame {
 		setTitle("Generador de Palabras");
 		setBounds(800, 200, 500, 305);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setResizable(false);
 
 		// Crea el icono de la apliación a partir de un codigo en base 64
 		ImageIcon iconoApp = new ImageIcon(Base64.getDecoder().decode(
@@ -114,10 +115,10 @@ public class Vista extends JFrame {
 		generationPanel.setLayout(null);
 
 		// Etiqueta para seleccionar el número de sílabas
-		lblNumSilabas = new JLabel("Número de Sílabas:", SwingConstants.CENTER);
-		lblNumSilabas.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNumSilabas.setBounds(100, 88, 117, 27);
-		generationPanel.add(lblNumSilabas);
+		lblNumLetras = new JLabel("Número de letras:", SwingConstants.CENTER);
+		lblNumLetras.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNumLetras.setBounds(100, 88, 117, 27);
+		generationPanel.add(lblNumLetras);
 
 		// Selector para el número de sílabas
 		spinnerNumSilabas = new JSpinner();
